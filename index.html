@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div>Imposta il tuo timer</div>
+    <input type="number" id="startMinuti" placeholder="Inserisci minuti.." class="input input-bordered input-lg w-full max-w-xs" />
+    
+    <button id="startBtn" class="btn btn-success">Avvia</button>
+    <button id="stopBtn" class="btn btn-error">Stop</button>
+
+    <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+    <div class="flex flex-col p-2 bg-pink-300 rounded-box text-neutral-content">
+      <span class="countdown font-mono text-5xl">
+        <span id="minutiTag" style="--value:0;"></span>
+      </span>
+      <span class="text-xl">min</span>
+    </div> 
+    <div class="flex flex-col p-2 bg-pink-200 rounded-box text-neutral-content">
+      <span class="countdown font-mono text-5xl">
+        <span id="secondiTag" style="--value:0;"></span>
+      </span>
+      <span class="text-xl">sec</span>
+    </div>
+  </div>
+    
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
