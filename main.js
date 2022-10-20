@@ -45,7 +45,7 @@ startBtn.onclick = () => {
 }
 
 /* ToDo 
-- stopBtn
+- stopBtn (restar)
 - disable textArea (+ no negative)
 - allert 30 sec, 10 sec, 5 sec (change color view)
 */
