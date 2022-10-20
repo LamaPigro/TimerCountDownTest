@@ -12,18 +12,6 @@ let minuti, secondi, timerID = undefined
 // stop - start - default
 let status = 'default'
 
-/*
-startMinuti.oninput = () => {
-  console.log(startMinuti.value)
-  minutiTag.style
-    .setProperty('--value', startMinuti.value)
-  secondiTag.style
-    .setProperty('--value', 0)
-
-  secondi = 0
-  minuti = startMinuti.value
-}*/
-
 startBtn.onclick = () => {
 	if (status === 'default') {
 		status = 'start'
@@ -65,7 +53,7 @@ startBtn.onclick = () => {
 		startMinuti.disabled = true;
 
 		// Cambiamo lo stile ed il testo di startBtn
-	  startBtn.textContent = "RESTART"
+	  startBtn.textContent = "RIAVVIA"
 	  startBtn.classList.remove("btn-success")
 	  startBtn.classList.add("btn-warning")
 		
@@ -86,6 +74,10 @@ startBtn.onclick = () => {
 	  startBtn.textContent = "AVVIA"
 	  startBtn.classList.remove("btn-warning")
 	  startBtn.classList.add("btn-success")
+
+    stopBtn.textContent = "STOP"
+	  stopBtn.classList.remove("btn-warning")
+	  stopBtn.classList.add("btn-error")
 	}
 }
 
@@ -93,17 +85,22 @@ stopBtn.onclick = () => {
   if (status === 'start') {
 		status = 'stop'
 
+    stopBtn.textContent = "RIPRENDI"
+	  stopBtn.classList.remove("btn-error")
+	  stopBtn.classList.add("btn-warning")
     
-
-		
+    
 	} else if (status === 'stop') {
 		status = 'start'
+
+    stopBtn.textContent = "STOP"
+	  stopBtn.classList.remove("btn-warning")
+	  stopBtn.classList.add("btn-error")
 	}
 }
 
 /* ToDo 
 - stopBtn (restart)
 - disable textArea (+ no negative)
-- allert 30 sec, 10 sec, 5 sec (change color view)
 - design
 */
